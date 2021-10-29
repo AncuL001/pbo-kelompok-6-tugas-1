@@ -13,8 +13,8 @@ struct Jam {
   Jam(int j, int m, int d):
     j{j}, m{m}, d{d} {};
 
-  Jam(const std::string& string_form){
-  std::stringstream ss(string_form);
+  Jam(const std::string& stringForm){
+  std::stringstream ss(stringForm);
   std::string tmp;
 
   std::getline(ss, tmp, ':');
@@ -37,7 +37,7 @@ struct Jam {
     if (d > rhs.d) return false;
     if (d < rhs.d) return true;
 
-    return true;
+    return false;
   }
 
   bool laterThan(const Jam& rhs) const {
@@ -50,7 +50,7 @@ struct Jam {
     if (d > rhs.d) return true;
     if (d < rhs.d) return false;
 
-    return true;
+    return false;
   }
 
   std::string str() const {
@@ -157,14 +157,14 @@ int main(){
     std::cin >> namaPegawai;
     std::cout << "Jam masuk " << i+1 << " (JJ:MM:DD) : ";
     std::cin >> jamMasuk;
-    std::cout << "Jam keluar " << i+1 << " (JJ:MM:DD) : ";
+    std::cout << "Jam pulang " << i+1 << " (JJ:MM:DD) : ";
     std::cin >> jamPulang;
 
     p.push_back(Pegawai(kodePegawai, namaPegawai, Jam(jamMasuk), Jam(jamPulang)));
     std::cout << "\n";
   }
 
-  for (int i = 0; i < 4; i++){
-    printInformation(p[i]);
+  for (auto pegawai : p){
+    printInformation(pegawai);
   }
 }
