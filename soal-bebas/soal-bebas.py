@@ -7,45 +7,48 @@
 
 import math
 
-# @staticmethod
-def faktorial(angka):
-    hasil = 1
-    for i in range(angka, 1, -1):
-        hasil *= i
-    return hasil
+class PersegiPanjang:
+    def __init__(self, *args):
+        if len(args) == 2:
+            self.__panjang = float(args[0])
+            self.__lebar = float(args[1])
+        elif len(args) == 0:
+            self.__panjang = float(0)
+            self.__lebar = float(0)
+    
+    def setPanjang(self):
+        print("Masukkan panjang persegi panjang  : ", end='')
+        self.__panjang = input()
+        self.__panjang = float(self.__panjang)
+    
+    def getPanjang(self):
+        return self.__panjang
+    
+    def setLebar(self):
+        print("Masukkan lebar persegi panjang    : ", end='')
+        self.__lebar = input()
+        self.__lebar = float(self.__lebar)
+    
+    def getLebar(self):
+        return self.__lebar
+    
+    def getKeliling(self):
+        return 2 * (self.__panjang + self.__lebar)
+    
+    def getLuas(self):
+        return self.__panjang * self.__lebar
 
-# @staticmethod
-def inputAngka():
-    angka = input()
-    return angka
+persegiPanjang1 = PersegiPanjang()
+persegiPanjang2 = PersegiPanjang(float(6.5), float(3.0))
+persegiPanjang1.setPanjang()
+persegiPanjang1.setLebar()
+        
+print("Panjang Persegi Panjang  1  : ", persegiPanjang1.getPanjang())
+print("Lebar Persegi Panjang 1     : ", persegiPanjang1.getLebar())
+print("Keliling Persegi Panjang 1  : ", persegiPanjang1.getKeliling())
+print("Luas Persegi Panjang 1      : ", persegiPanjang1.getLuas(), "\n")
 
-# @staticmethod
-def permutasi(n, r):
-    pembilang = faktorial(n)
-    penyebut = faktorial(n-r)
-    return math.trunc(pembilang / float(penyebut))
-
-# @staticmethod
-def kombinasi(n, r):
-    pembilang = faktorial(n)
-    penyebut = faktorial(n-r) * faktorial(r)
-    return math.trunc(pembilang / float(penyebut))
-
-# @staticmethod
-def output(n, r):
-    print("Permutasi : ", permutasi(n,r))
-    print("Kombinasi : ", kombinasi(n,r))
-
-n = None
-r = None
-
-print("Masukkan n : ", end = '')
-n = inputAngka()
-print("Masukkan r : ", end = '')
-r = inputAngka()
-
-n = int(n)
-r = int(r)
-
-print("")
-output(n, r)
+print("Panjang Persegi Panjang  2  : ", persegiPanjang2.getPanjang())
+print("Lebar Persegi Panjang 2     : ", persegiPanjang2.getLebar())
+print("Keliling Persegi Panjang 2  : ", persegiPanjang2.getKeliling())
+print("Luas Persegi Panjang 2      : ", persegiPanjang2.getLuas())

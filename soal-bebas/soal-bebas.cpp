@@ -8,43 +8,64 @@
 *********************************************/
 #include <iostream>
 
-int faktorial(int angka){
-    int hasil = 1;
-    for (int i = angka; i >= 1; i--)
-        hasil *= i;
-    return hasil;
-}
+class PersegiPanjang{
+    private :
+    float panjang, lebar;
+    
+    public :
+    PersegiPanjang(){
+        this->panjang = 0;
+        this->lebar = 0;
+    }
+    
+    PersegiPanjang(float panjang, float lebar){
+        this->panjang = panjang;
+        this->lebar = lebar;
+    }
+    
+    void setPanjang(){
+        std::cout << "Masukkan panjang persegi panjang  : ";
+        std::cin >> this->panjang;
+    }
+    
+    float getPanjang(){
+        return this->panjang;
+    }
+    
+    void setLebar(){
+        std::cout << "Masukkan lebar persegi panjang    : ";
+        std::cin >> this->lebar;
+    }
+    
+    float getLebar(){
+        return this->lebar;
+    }
+    
+    float getKeliling(){
+        return this->panjang+this->lebar;
+    }
+    
+    float getLuas(){
+        return this->panjang*this->lebar;
+    }
+};
 
-int inputAngka(){
-    int angka;
-    std::cin >> angka;
-    return angka;
-}
-
-int permutasi(int n, int r){
-    int pembilang = faktorial(n);
-    int penyebut = faktorial(n-r);
-    return pembilang / float(penyebut);
-}
-
-int kombinasi(int n, int r){
-    int pembilang = faktorial(n);
-    int penyebut = faktorial(n-r) * faktorial(r);
-    return pembilang / float(penyebut);
-}
-
-void output(int n, int r){
-    std::cout << "Permutasi : " << permutasi(n,r) << "\n";
-    std::cout << "Kombinasi : " << kombinasi(n,r);
-}
 
 int main(){
-    int n, r;
+    PersegiPanjang persegiPanjang1;
+    PersegiPanjang persegiPanjang2(float(6.5), float(3.0));
+    persegiPanjang1.setPanjang();
+    persegiPanjang1.setLebar();
+            
+    std::cout << "Panjang Persegi Panjang  1  : " << persegiPanjang1.getPanjang() << "\n";
+    std::cout << "Lebar Persegi Panjang 1     : " << persegiPanjang1.getLebar() << "\n";
+    std::cout << "Keliling Persegi Panjang 1  : " << persegiPanjang1.getKeliling() << "\n";
+    std::cout << "Luas Persegi Panjang 1      : " << persegiPanjang1.getLuas() << "\n\n";
 
-    std::cout << "Masukkan n : "; std::cin >> n;
-    std::cout << "Masukkan r : "; std::cin >> r;
+    std::cout << "Panjang Persegi Panjang  2  : " << persegiPanjang2.getPanjang() << "\n";
+    std::cout << "Lebar Persegi Panjang 2     : " << persegiPanjang2.getLebar() << "\n";
+    std::cout << "Keliling Persegi Panjang 2  : " << persegiPanjang2.getKeliling() << "\n";
+    std::cout << "Luas Persegi Panjang 2      : " << persegiPanjang2.getLuas() << "\n\n";
 
-    std::cout << "\n";
-    output(n, r);
     return 0;
 }
