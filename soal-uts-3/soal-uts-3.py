@@ -1,3 +1,10 @@
+# Nama File : soal-uts-3.py
+# Nama      : Andaru Danurdara Wibisana, Fauzan Azmi Dwicahyo, Irfan Kamal, Muhammad Attila An Naufal
+# NPM       : 140810200020, 140810200030, 140810200032, 140810200048
+# Kelas     : B
+# Tanggal   : 13 Oktober 2021
+# Deskripsi : Implementasi Soal UTS ke-3 pada Python
+
 class Jam:
   def __init__(self, j : int, m : int, d: int):
     self.j = j
