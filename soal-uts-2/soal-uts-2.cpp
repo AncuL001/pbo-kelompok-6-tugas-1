@@ -114,11 +114,11 @@ int main(){
     int *jumlahBaris = matrix.jBaris();
     int *jumlahKolom = matrix.jKolom();
     std::cout<<"\nJumlah Baris Matrix : ";
-    for(int i = 0; i < matrix.getKolom(); i++){
+    for(int i = 0; i < matrix.getBaris(); i++){
         std::cout<<jumlahBaris[i]<<" ";
     }
     std::cout<<"\nJumlah Kolom Matrix : ";
-    for(int i = 0; i < matrix.getBaris(); i++){
+    for(int i = 0; i < matrix.getKolom(); i++){
         std::cout<<jumlahKolom[i]<<" ";
     }
     return 0;
