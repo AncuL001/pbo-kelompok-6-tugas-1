@@ -16,18 +16,14 @@ class PersegiPanjang:
             self.__panjang = float(0)
             self.__lebar = float(0)
     
-    def setPanjang(self):
-        print("Masukkan panjang persegi panjang  : ", end='')
-        self.__panjang = input()
-        self.__panjang = float(self.__panjang)
+    def setPanjang(self, panjang):
+        self.__panjang = float(panjang)
     
     def getPanjang(self):
         return self.__panjang
     
-    def setLebar(self):
-        print("Masukkan lebar persegi panjang    : ", end='')
-        self.__lebar = input()
-        self.__lebar = float(self.__lebar)
+    def setLebar(self, lebar):
+        self.__lebar = float(lebar)
     
     def getLebar(self):
         return self.__lebar
@@ -40,8 +36,11 @@ class PersegiPanjang:
 
 persegiPanjang1 = PersegiPanjang()
 persegiPanjang2 = PersegiPanjang(float(6.5), float(3.0))
-persegiPanjang1.setPanjang()
-persegiPanjang1.setLebar()
+
+print("Masukkan panjang persegi panjang  : ", end='')
+persegiPanjang1.setPanjang(input())
+print("Masukkan lebar persegi panjang    : ", end='')
+persegiPanjang1.setLebar(input())
         
 print("Panjang Persegi Panjang  1  : ", persegiPanjang1.getPanjang())
 print("Lebar Persegi Panjang 1     : ", persegiPanjang1.getLebar())
