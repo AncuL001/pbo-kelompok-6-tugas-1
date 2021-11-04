@@ -57,6 +57,6 @@ jumBaris = matrix.jBaris()
 print("\n[Jumlah Baris Matrix]")
 print(jumBaris)
 jumKolom = matrix.jKolom()
-print("\n[Jumlah Baris Matrix]")
-print(jumBaris)
+print("\n[Jumlah Kolom Matrix]")
+print(jumKolom)
 time.sleep(10);

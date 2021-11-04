@@ -98,6 +98,9 @@ class Matriks {
     }
 };
 
+
+
+
 int main(){
     int baris = 0, kolom = 0;
     std::cout<<"[Program Uts Soal 2]\nBaris : ";

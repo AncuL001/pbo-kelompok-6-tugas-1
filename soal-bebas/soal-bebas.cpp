@@ -23,18 +23,16 @@ class PersegiPanjang{
         this->lebar = lebar;
     }
     
-    void setPanjang(){
-        std::cout << "Masukkan panjang persegi panjang  : ";
-        std::cin >> this->panjang;
-    }
+    void setPanjang(int panjang){
+        this->panjang = panjang;
+    } 
     
     float getPanjang(){
         return this->panjang;
     }
     
     void setLebar(){
-        std::cout << "Masukkan lebar persegi panjang    : ";
-        std::cin >> this->lebar;
+        
     }
     
     float getLebar(){
@@ -54,8 +52,13 @@ class PersegiPanjang{
 int main(){
     PersegiPanjang persegiPanjang1;
     PersegiPanjang persegiPanjang2(float(6.5), float(3.0));
-    persegiPanjang1.setPanjang();
-    persegiPanjang1.setLebar();
+    int panjang = 0, lebar = 0;
+    std::cout << "Masukkan panjang : ";
+    std::cin >> panjang;
+    std::cout << "Masukkan lebar : ";
+    std::cin >> lebar;
+    persegiPanjang1.setPanjang(panjang);
+    persegiPanjang1.setLebar(lebar);
             
     std::cout << "Panjang Persegi Panjang  1  : " << persegiPanjang1.getPanjang() << "\n";
     std::cout << "Lebar Persegi Panjang 1     : " << persegiPanjang1.getLebar() << "\n";
