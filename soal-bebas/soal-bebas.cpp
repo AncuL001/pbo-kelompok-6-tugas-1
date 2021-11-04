@@ -52,7 +52,7 @@ class PersegiPanjang{
 int main(){
     PersegiPanjang persegiPanjang1;
     PersegiPanjang persegiPanjang2(float(6.5), float(3.0));
-    int panjang = 0, lebar = 0;
+    float panjang = 0, lebar = 0;
     std::cout << "Masukkan panjang : ";
     std::cin >> panjang;
     std::cout << "Masukkan lebar : ";
