@@ -23,17 +23,17 @@ struct Jam {
     j{j}, m{m}, d{d} {};
 
   Jam(const std::string& stringForm){
-  std::stringstream ss(stringForm);
-  std::string tmp;
+    std::stringstream ss(stringForm);
+    std::string tmp;
 
-  std::getline(ss, tmp, ':');
-  this->j = stoi(tmp);
+    std::getline(ss, tmp, ':');
+    this->j = stoi(tmp);
 
-  std::getline(ss, tmp, ':');
-  this->m  = stoi(tmp);
+    std::getline(ss, tmp, ':');
+    this->m  = stoi(tmp);
 
-  std::getline(ss, tmp, ':');
-  this->d = stoi(tmp);
+    std::getline(ss, tmp, ':');
+    this->d = stoi(tmp);
   }
 
   bool earlierThan(const Jam& rhs) const {
