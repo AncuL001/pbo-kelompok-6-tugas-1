@@ -59,4 +59,4 @@ print(jumBaris)
 jumKolom = matrix.jKolom()
 print("\n[Jumlah Kolom Matrix]")
 print(jumKolom)
-time.sleep(10);
+time.sleep(10)
