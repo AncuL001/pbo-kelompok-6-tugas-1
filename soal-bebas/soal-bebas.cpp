@@ -23,7 +23,7 @@ class PersegiPanjang{
         this->lebar = lebar;
     }
     
-    void setPanjang(int panjang){
+    void setPanjang(float panjang){
         this->panjang = panjang;
     } 
     
@@ -31,8 +31,8 @@ class PersegiPanjang{
         return this->panjang;
     }
     
-    void setLebar(){
-        
+    void setLebar(float lebar){
+        this->lebar = lebar;
     }
     
     float getLebar(){
